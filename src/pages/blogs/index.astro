@@ -15,7 +15,7 @@ const posts = await Astro.glob('./*.md');
           <a href={post.url} class="anchor flex flex-col">
             <span class="line-clamp-1">{post.frontmatter.title}</span>
             <span class="line-clamp-1 text-sm opacity-50">
-              posted on {new Date(post.frontmatter.pubDate.toLocaleDateString()).toLocaleDateString()}
+              posted on {new Date(post.frontmatter.date).toLocaleDateString()}
             </span>
           </a>
         ))

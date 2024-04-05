@@ -11,7 +11,7 @@ const { frontmatter } = Astro.props;
         {frontmatter.tags.map((tag: string) => <span class="opacity-50">#{tag}</span>)}
       </div>
       <h1 class="text-4xl font-black">{frontmatter.title}</h1>
-      <p class="opacity-75">posted on {new Date(frontmatter.pubDate).toLocaleDateString()}</p>
+      <p class="opacity-75">posted on {new Date(frontmatter.date).toLocaleDateString()}</p>
     </div>
 
     <div class="prose prose-ctp">

@@ -3,7 +3,7 @@ layout: '../../layouts/BlogLayout.astro'
 title: 'my first blog'
 description: 'my first blog wow'
 published: true
-pubDate: 2021-10-10
+date: 2021-10-10
 tags: ['blog', 'general', 'website']
 ---
 
