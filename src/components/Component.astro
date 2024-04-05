@@ -1,0 +1,11 @@
+---
+import type { AstroComponentFactory } from 'astro/dist/runtime/server';
+
+interface Props {
+  component: AstroComponentFactory;
+}
+
+const { component: Component } = Astro.props;
+---
+
+<Component />

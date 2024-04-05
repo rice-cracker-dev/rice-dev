@@ -1,0 +1,19 @@
+.btn {
+  @apply px-4 py-2 rounded flex items-center gap-4;
+
+  &:hover {
+    @apply brightness-105;
+  }
+
+  &:active {
+    @apply scale-95 brightness-75;
+  }
+}
+
+.btn-neutral {
+  @apply bg-base text-text;
+}
+
+.btn-accent {
+  @apply bg-mauve text-crust;
+}

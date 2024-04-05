@@ -1,0 +1,11 @@
+.anchor {
+  @apply underline-offset-[6px] decoration-[3px];
+}
+
+.anchor:hover {
+  @apply brightness-110;
+}
+
+.anchor-active {
+  @apply text-mauve underline;
+}

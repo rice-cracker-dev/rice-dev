@@ -1,0 +1,7 @@
+.prose {
+  max-width: none !important;
+
+  & blockquote {
+    @apply border-l-2
+  }
+}

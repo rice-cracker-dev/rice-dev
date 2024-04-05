@@ -1,0 +1,27 @@
+---
+import '../styles/index.scss';
+import Navbar from '../components/Navbar.astro';
+
+interface Props {
+  title: string;
+  navbarFixed?: boolean;
+}
+
+const { title, navbarFixed } = Astro.props;
+---
+
+<html lang="en" class="macchiato">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <Navbar {navbarFixed} />
+
+    <slot />
+  </body>
+</html>

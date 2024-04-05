@@ -1,0 +1,35 @@
+---
+import { Astro } from 'astro/env';
+interface Props {
+  navbarFixed?: boolean;
+}
+
+interface NavbarLink {
+  title: string;
+  href: string;
+}
+
+const navbarLinks: NavbarLink[] = [
+  { href: '/', title: 'home' },
+  { href: '/blogs', title: 'blog' },
+  { href: '/faq', title: 'faq' },
+];
+
+const { navbarFixed } = Astro.props;
+---
+
+<div class={`inset-x-0 top-0 bg-crust ${navbarFixed ? 'fixed' : 'sticky'}`}>
+  <div class="container-full grid grid-cols-2 py-8">
+    <p>rice-dev</p>
+
+    <div class="ml-auto hidden gap-8 md:flex">
+      {
+        navbarLinks.map(({ href, title }) => (
+          <a {href} class:list={['anchor', { 'anchor-active': Astro.url.pathname === href }]}>
+            {title}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</div>
