@@ -1,5 +1,5 @@
 .btn {
-  @apply px-4 py-2 rounded flex items-center gap-4;
+  @apply flex items-center gap-4 rounded px-4 py-2;
 
   &:hover {
     @apply brightness-105;

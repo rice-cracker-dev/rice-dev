@@ -1,5 +1,5 @@
-import catppuccin from "@catppuccin/tailwindcss"
-import typography  from '@tailwindcss/typography';
+import catppuccin from '@catppuccin/tailwindcss';
+import typography from '@tailwindcss/typography';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -7,7 +7,7 @@ export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
-      typography: ({ theme }) => ({
+      typography: {
         ctp: {
           css: {
             '--tw-prose-body': `rgba(var(--ctp-text), 75%)`,
@@ -26,9 +26,9 @@ export default {
             '--tw-prose-pre-bg': `rgb(var(--ctp-base))`,
             '--tw-prose-th-borders': `rgba(var(--ctp-text), 25%)`,
             '--tw-prose-td-borders': `rgba(var(--ctp-text), 25%)`,
-          }
-        }
-      }),
+          },
+        },
+      },
     },
   },
 };

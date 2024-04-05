@@ -11,11 +11,11 @@
 :root {
   @apply bg-crust text-text;
 
-  font-family: "JetBrains Mono", monospace;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .container-full {
-  @apply w-full container mx-auto px-4
+  @apply container mx-auto w-full px-4;
 }
 
 .bg-grid {
