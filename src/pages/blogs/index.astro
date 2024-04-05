@@ -1,11 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Component from '../../components/Component.astro';
 
 const posts = await Astro.glob('./*.md');
 ---
 
-<BaseLayout>
+<BaseLayout title="my blogs">
   <section class="container-full mt-16">
     <div class=""></div>
 
@@ -15,7 +14,9 @@ const posts = await Astro.glob('./*.md');
         .map((post) => (
           <a href={post.url} class="anchor flex flex-col">
             <span class="line-clamp-1">{post.frontmatter.title}</span>
-            <span class="line-clamp-1 text-sm opacity-50">posted on {post.frontmatter.pubDate}</span>
+            <span class="line-clamp-1 text-sm opacity-50">
+              posted on {new Date(post.frontmatter.pubDate.toLocaleDateString()).toLocaleDateString()}
+            </span>
           </a>
         ))
     }
