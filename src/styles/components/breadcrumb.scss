@@ -1,0 +1,9 @@
+.breadcrumb {
+  @apply flex items-center;
+
+  & > .crumb:not(:first-child)::before {
+    @apply mx-4;
+
+    content: '>';
+  }
+}

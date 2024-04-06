@@ -1,5 +1,9 @@
 .anchor {
-  @apply inline-flex items-center gap-4 decoration-[3px] underline-offset-8;
+  @apply inline-flex items-center gap-4 decoration-1 underline-offset-4;
+}
+
+.anchor-accent {
+  @apply text-mauve;
 }
 
 .anchor:hover {
@@ -7,5 +11,5 @@
 }
 
 .anchor-active {
-  @apply text-mauve underline;
+  @apply text-mauve underline decoration-[3px] underline-offset-8;
 }

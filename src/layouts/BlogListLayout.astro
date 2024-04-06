@@ -27,7 +27,7 @@ const { title, header, subheader, posts } = Astro.props;
           .map((post) => (
             <a href={`/blogs/${post.slug}`} class="anchor flex flex-col items-start gap-0">
               <span class="line-clamp-1">{post.data.title}</span>
-              <span class="line-clamp-1 text-sm opacity-50">posted on {post.data.date.toLocaleDateString()}</span>
+              <span class="line-clamp-1 text-sm text-text/50">posted on {post.data.date.toLocaleDateString()}</span>
             </a>
           ))
       }
