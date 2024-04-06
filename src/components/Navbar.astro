@@ -10,11 +10,14 @@ interface NavbarLink {
 
 const navbarLinks: NavbarLink[] = [
   { href: '/', title: 'home' },
-  { href: '/blogs', title: 'blog' },
+  { href: '/blogs', title: 'blogs' },
   { href: '/faq', title: 'faq' },
 ];
 
 const { navbarFixed } = Astro.props;
+
+const isActive = (pathname: string, href: string) =>
+  (pathname === href && href === '/') || (pathname.startsWith(href) && href !== '/');
 ---
 
 <div class={`inset-x-0 top-0 bg-crust ${navbarFixed ? 'fixed' : 'sticky'}`}>
@@ -24,7 +27,7 @@ const { navbarFixed } = Astro.props;
     <div class="ml-auto hidden gap-8 md:flex">
       {
         navbarLinks.map(({ href, title }) => (
-          <a {href} class:list={['anchor', { 'anchor-active': Astro.url.pathname === href }]}>
+          <a {href} class:list={['anchor', { 'anchor-active': isActive(Astro.url.pathname, href) }]}>
             {title}
           </a>
         ))

@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/BlogLayout.astro'
 title: 'my first blog'
 description: 'my first blog wow'
 published: true
