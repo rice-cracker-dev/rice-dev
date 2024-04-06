@@ -5,13 +5,19 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout title={frontmatter.title}>
-  <article class="container-full mt-16 flex flex-col gap-24">
+  <article class="container-full mt-16 flex flex-col gap-16">
     <div class="flex flex-col gap-2">
       <div class="flex items-center gap-2 text-sm md:gap-4">
-        {frontmatter.tags.map((tag: string) => <span class="opacity-50">#{tag}</span>)}
+        {
+          frontmatter.tags.map((tag: string) => (
+            <a href={`/blogs/tags/${tag}`} class="anchor text-text/50">
+              #{tag}
+            </a>
+          ))
+        }
       </div>
-      <h1 class="text-4xl font-black">{frontmatter.title}</h1>
-      <p class="opacity-75">posted on {frontmatter.date.toLocaleDateString()}</p>
+      <h1 class="text-4xl">{frontmatter.title}</h1>
+      <p class="text-text/75">posted on {frontmatter.date.toLocaleDateString()}</p>
     </div>
 
     <div class="prose prose-ctp">

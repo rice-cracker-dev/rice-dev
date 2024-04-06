@@ -1,6 +1,16 @@
 .prose {
   max-width: none !important;
 
+  & p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-normal;
+  }
+
   & blockquote {
     @apply border-l-2;
   }

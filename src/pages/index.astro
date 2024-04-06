@@ -7,8 +7,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   import Typed from 'typed.js';
 
   new Typed(document.getElementById('hero-header'), {
-    strings: ['hello.'],
+    strings: ['hello.', "i'm rice"],
     typeSpeed: 50,
+    backDelay: 1000,
   });
 </script>
 
@@ -21,7 +22,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </h1>
         <p class="opacity-75">this is my personal portfolio/blog page.</p>
         <div class="mt-8 flex gap-4">
-          <a href="/" class="btn btn-accent">about me</a>
+          <a href="/blogs/about-me" class="btn btn-accent">about me</a>
           <a href="https://github.com/rice-cracker-dev" target="_blank" class="btn btn-neutral">
             <Icon name="fa6-brands:github" />
             <span>my github</span>
