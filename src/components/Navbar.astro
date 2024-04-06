@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 interface Props {
   navbarFixed?: boolean;
 }
@@ -11,7 +13,7 @@ interface NavbarLink {
 const navbarLinks: NavbarLink[] = [
   { href: '/', title: 'home' },
   { href: '/blogs', title: 'blogs' },
-  { href: '/faq', title: 'faq' },
+  { href: '/projects', title: 'projects' },
 ];
 
 const { navbarFixed } = Astro.props;
@@ -20,18 +22,25 @@ const isActive = (pathname: string, href: string) =>
   (pathname === href && href === '/') || (pathname.startsWith(href) && href !== '/');
 ---
 
-<div class={`inset-x-0 top-0 bg-crust ${navbarFixed ? 'fixed' : 'sticky'}`}>
-  <div class="container-full grid grid-cols-2 py-8">
-    <a href="/" class="anchor">rice-dev</a>
+<div class={`inset-x-0 top-0 z-10 bg-mantle ${navbarFixed ? 'fixed' : 'sticky'}`}>
+  <div class="container-full grid grid-cols-1 py-8 md:grid-cols-2">
+    <a href="/" class="anchor hidden md:flex">
+      <img src="/favicon.svg" alt="nixppuccin" class="h-12" />
+      <span>rice-dev</span>
+    </a>
 
-    <div class="ml-auto hidden gap-8 md:flex">
+    <div class="flex justify-center gap-8 md:justify-end">
       {
         navbarLinks.map(({ href, title }) => (
-          <a {href} class:list={['anchor', { 'anchor-active': isActive(Astro.url.pathname, href) }]}>
+          <a {href} class="anchor" class:list={[{ 'anchor-active': isActive(Astro.url.pathname, href) }]}>
             {title}
           </a>
         ))
       }
+
+      <a href="https://github.com/rice-cracker-dev/rice-dev" class="anchor">
+        <Icon name="fa6-brands:github" size="24" />
+      </a>
     </div>
   </div>
 </div>

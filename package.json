@@ -19,6 +19,7 @@
     "@catppuccin/tailwindcss": "^0.1.6",
     "@fontsource/jetbrains-mono": "^5.0.19",
     "@iconify-json/devicon": "^1.1.36",
+    "@iconify-json/ph": "^1.1.12",
     "astro": "^4.5.15",
     "astro-icon": "^1.1.0",
     "svelte": "^4.2.12",

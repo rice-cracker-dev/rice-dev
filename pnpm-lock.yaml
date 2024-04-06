@@ -32,6 +32,9 @@ dependencies:
   '@iconify-json/devicon':
     specifier: ^1.1.36
     version: 1.1.36
+  '@iconify-json/ph':
+    specifier: ^1.1.12
+    version: 1.1.12
   astro:
     specifier: ^4.5.15
     version: 4.5.15(sass@1.74.1)(typescript@5.4.4)
@@ -1137,6 +1140,13 @@ packages:
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
+
+  /@iconify-json/ph@1.1.12:
+    resolution:
+      { integrity: sha512-m+rXTW084YaQQHT+F8TxdkCoAh+i/5MWRoSuPmxCWPlxwMAaLT/QfyVsbEiV95HM5806U/jKpBV6F1b7Pmr3Vg== }
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
 
   /@iconify/tools@3.0.7:
     resolution:

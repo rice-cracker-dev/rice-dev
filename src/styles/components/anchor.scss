@@ -1,5 +1,5 @@
 .anchor {
-  @apply decoration-[3px] underline-offset-8;
+  @apply inline-flex items-center gap-4 decoration-[3px] underline-offset-8;
 }
 
 .anchor:hover {
