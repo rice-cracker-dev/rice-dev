@@ -13,9 +13,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   });
 </script>
 
-<BaseLayout title="rice-dev" navbarFixed>
-  <div class="flex min-h-svh flex-col justify-center gap-16">
-    <section class="container-full">
+<BaseLayout title="rice-dev" navbarFixed transparent>
+  <section class="relative flex min-h-svh flex-col justify-center gap-16">
+    <img
+      src="/hero-background.png"
+      alt=""
+      class="img-cover opacity-25"
+      style="-webkit-mask-image: linear-gradient(to bottom right, transparent, #000)"
+    />
+
+    <div class="container-full relative">
       <div class="flex flex-col items-center gap-4 text-center md:max-w-[50%] md:items-start md:text-left">
         <h1 class="text-4xl">
           <span id="hero-header"></span>
@@ -29,6 +36,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </a>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </BaseLayout>

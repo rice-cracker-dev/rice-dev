@@ -1,15 +1,15 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 
-const { frontmatter } = Astro.props;
+const { frontmatter, slug } = Astro.props;
 ---
 
 <BaseLayout title={frontmatter.title}>
   <article class="container-full mt-16 flex flex-col gap-16">
     <div class="flex flex-col gap-2">
       <div class="breadcrumb">
-        <a href="/blogs" class="crumb text-text/75 hover:brightness-110">blogs</a>
-        <a href="/blogs" class="crumb text-text">{frontmatter.title}</a>
+        <a href={`/blogs#${slug}`} class="crumb text-text/75 hover:brightness-110">blogs</a>
+        <a class="crumb text-text">{frontmatter.title}</a>
       </div>
 
       <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm md:gap-4">

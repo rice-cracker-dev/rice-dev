@@ -3,6 +3,7 @@ import { Icon } from 'astro-icon/components';
 
 interface Props {
   navbarFixed?: boolean;
+  transparent?: boolean;
 }
 
 interface NavbarLink {
@@ -16,13 +17,13 @@ const navbarLinks: NavbarLink[] = [
   { href: '/projects', title: 'projects' },
 ];
 
-const { navbarFixed } = Astro.props;
+const { navbarFixed, transparent } = Astro.props;
 
 const isActive = (pathname: string, href: string) =>
   (pathname === href && href === '/') || (pathname.startsWith(href) && href !== '/');
 ---
 
-<div class={`inset-x-0 top-0 z-10 bg-mantle ${navbarFixed ? 'fixed' : 'sticky'}`}>
+<div class={`inset-x-0 top-0 z-10 ${transparent ? 'bg-transparent' : 'bg-mantle'} ${navbarFixed ? 'fixed' : 'sticky'}`}>
   <div class="container-full grid grid-cols-1 py-8 md:grid-cols-2">
     <a href="/" class="anchor hidden md:flex">
       <img src="/favicon.svg" alt="nixppuccin" class="h-12" />

@@ -6,9 +6,10 @@ import Footer from '../components/Footer.astro';
 interface Props {
   title: string;
   navbarFixed?: boolean;
+  transparent?: boolean;
 }
 
-const { title, navbarFixed } = Astro.props;
+const { title, navbarFixed, transparent } = Astro.props;
 ---
 
 <html lang="en" class="macchiato">
@@ -22,7 +23,7 @@ const { title, navbarFixed } = Astro.props;
 
   <body>
     <main class="min-h-svh">
-      <Navbar {navbarFixed} />
+      <Navbar {navbarFixed} {transparent} />
 
       <slot />
     </main>
